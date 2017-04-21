@@ -1,7 +1,13 @@
-// <Setup the configuration module for knex and bookshelf>
+'use strict';
 
-// I have already run 'knex init' at the root of this project to create the knexfile.js.
-// The music history database lives right here as a document in this project, so note
-// that the devlopment configuration sets that environment to use sqlite instead of postgres.
+// Setup the configuration module for knex and bookshelf
+const config = require('../knexfile')['development']
+const knex = require('knex')(config);
+const bookshelf = require('bookshelf')(knex);
 
-// No need to make migrations, since the db and tables already exist
+// Resolve circular dependencies with relations, ie models requiring each other
+// when defining relationships
+bookshelf.plugin('registry');
+
+
+module.exports = { knex, bookshelf };

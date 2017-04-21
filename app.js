@@ -1,16 +1,17 @@
-'use strict'
+'use strict';
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const routes = ('./routes/');
+const routes = require('./routes/');
 let app = express();
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 
-// Setup your routes middleware
+// Setup routes middleware
 app.use('/musichistory/api/', routes);
+
 
 
 // catch any undefined routes with a 404 middleware
