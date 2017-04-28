@@ -14,5 +14,4 @@ const getAlbums = (req, res, next) => {
   })
 }
 
-
 module.exports = { getAlbums };
