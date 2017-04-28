@@ -3,7 +3,7 @@ module.exports = {
 
   development: {
     client: 'postgresql',
-    connection: ,
+    connection: 'postgres://localhost/',
     migrations: {
       directory: __dirname + '/db/migrations'
     },
@@ -12,19 +12,17 @@ module.exports = {
     }
   },
 
-  staging: {
-    client: './musichistory.db',
-    connection: {
-      database: 'my_db'
-    },
-
-  },
 
   production: {
     client: 'postgresql',
     connection: {
       database: process.env.DATABASE_URL
     },
+    migrations: {
+      directory: __dirname + '/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/db/seeds'
+    }
   }
-
 };
