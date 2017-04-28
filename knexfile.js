@@ -10,35 +10,18 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: './musichistory.db',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: 'my_db'
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
+
   },
 
   production: {
-    client: 'postgresql',
+    client: 'sqlite3',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: './musichistory.db'
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
   }
 
 };
