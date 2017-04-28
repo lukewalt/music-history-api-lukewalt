@@ -19,7 +19,4 @@ router.get('/', (req, res) => {
 router.get('/songs', getSongs);
 router.get('/albums', getAlbums);
 
-
-
-
 module.exports = router;
