@@ -2,11 +2,14 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
-    connection: {
-      filename: './musichistory.db'
+    client: 'postgresql',
+    connection: ,
+    migrations: {
+      directory: __dirname + '/db/migrations'
     },
-    useNullAsDefault: true
+    seeds: {
+      directory: __dirname + '/db/seeds'
+    }
   },
 
   staging: {
@@ -18,9 +21,9 @@ module.exports = {
   },
 
   production: {
-    client: 'sqlite3',
+    client: 'postgresql',
     connection: {
-      database: './musichistory.db'
+      database: process.env.DATABASE_URL
     },
   }
 
