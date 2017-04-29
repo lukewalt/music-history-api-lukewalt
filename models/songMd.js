@@ -27,6 +27,12 @@ const Songs = bookshelf.Model.extend({
     .fetch()
     .then( song => song )
     .catch( err => err )
+  },
+  addOne: function(newSong) {
+    return this.forge(newSong)
+    .save()
+    .then( newSong => newSong )
+    .catch( error => error )
   }
 
 })

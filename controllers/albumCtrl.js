@@ -22,4 +22,16 @@ const getOneAlbum = ({ params: {id} }, res, next) => {
   .catch( error => next(error))
 }
 
-module.exports = { getAlbums, getOneAlbum };
+const addAlbum = ({body}, res, next) => {
+  Albums.addOne(body)
+  .then( album => res.status(200).json(album))
+  .catch(error => next(error))
+}
+
+const removeAlbum = ({ params: {id} }, res, next) => {
+  Albums.removeOne(id)
+  .then( album => res.status(200).json(album))
+  .catch(error => next(error))
+}
+
+module.exports = { getAlbums, getOneAlbum, addAlbum, removeAlbum };

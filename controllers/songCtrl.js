@@ -22,6 +22,10 @@ const getOneSong = ({ params: {id} }, res, next) => {
   .catch( error => next(error))
 }
 
+const addSong = ({body}, res, next) => {
+  Songs.addOne(body)
+  .then( song => res.status(200).json(song))
+  .catch(error => next(error))
+}
 
-
-module.exports = { getSongs, getOneSong };
+module.exports = { getSongs, getOneSong, addSong };

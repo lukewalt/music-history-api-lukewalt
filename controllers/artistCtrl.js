@@ -20,4 +20,10 @@ const getOneArtist = ({ params: {id} }, res, next) => {
   .catch( error => next(error))
 }
 
-module.exports = { getArtists, getOneArtist };
+const addArtist = ({body}, res, next) => {
+  Artists.addOne(body)
+  .then( artist => res.status(200).json(artist))
+  .catch(error => next(error))
+}
+
+module.exports = { getArtists, getOneArtist, addArtist };

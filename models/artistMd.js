@@ -20,6 +20,12 @@ const Artists = bookshelf.Model.extend({
     .fetch()
     .then( artist => aritst )
     .catch(error => error)
+  },
+  addOne: function(newArtist) {
+    return this.forge(newArtist)
+    .save()
+    .then( newArtist => newArtist )
+    .catch( error => error )
   }
 })
 

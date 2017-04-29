@@ -10,9 +10,17 @@ router.get('/', (req, res) => {
   res.json({
     "title": "The Music History API",
     "songs": "music-history-api.herokuapp.com/musichistory/api/songs",
+    "oneSong": "music-history-api.herokuapp.com/musichistory/api/songs/:id",
+    "addSong": "music-history-api.herokuapp.com/musichistory/api/songs/{obj}",
     "artists": "music-history-api.herokuapp.com/musichistory/api/artists",
+    "oneArtist": "music-history-api.herokuapp.com/musichistory/api/artists/:id",
+    "addArtists": "music-history-api.herokuapp.com/musichistory/api/artists/{obj}",
     "genres": "music-history-api.herokuapp.com/musichistory/api/genres",
-    "albums": "music-history-api.herokuapp.com/musichistory/api/albums"
+    "oneGenre": "music-history-api.herokuapp.com/musichistory/api/genres/:id",
+    "addGenre": "music-history-api.herokuapp.com/musichistory/api/genres/{obj}",
+    "albums": "music-history-api.herokuapp.com/musichistory/api/albums",
+    "oneAlbum": "music-history-api.herokuapp.com/musichistory/api/albums/:id",
+    "addAlbum": "music-history-api.herokuapp.com/musichistory/api/albums/{obj}"
   });
 });
 

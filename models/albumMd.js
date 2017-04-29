@@ -22,7 +22,18 @@ const Albums = bookshelf.Model.extend({
       return album
     })
     .catch( error => error)
-
+  },
+  addOne: function(newAlbum){
+    return this.forge(newAlbum)
+    .save()
+    .then( newAlbum => newAlbum )
+    .catch( error => error )
+  },
+  removeOne: function(id) {
+    return this.forge({id})
+    .destroy()
+    .then( album => album)
+    .catch( error => error )
   }
 })
 
