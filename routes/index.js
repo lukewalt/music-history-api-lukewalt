@@ -21,6 +21,7 @@ router.get('/', (req, res) => {
     "albums": "music-history-api.herokuapp.com/musichistory/api/albums",
     "oneAlbum": "music-history-api.herokuapp.com/musichistory/api/albums/:id",
     "addAlbum": "music-history-api.herokuapp.com/musichistory/api/albums/{obj}"
+    "removeAlbum": "music-history-api.herokuapp.com/musichistory/api/albums/:id"
   });
 });
 
