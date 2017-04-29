@@ -2,8 +2,8 @@
 
 const { bookshelf } = require('../db/database');
 
-const Albums = bookshelf.Model.extend({
-  tableName: 'album'
+const Artists = bookshelf.Model.extend({
+  tableName: 'artist'
 }, {
   getAll: function() {
     return this.forge()
@@ -17,4 +17,5 @@ const Albums = bookshelf.Model.extend({
   }
 })
 
-module.exports = bookshelf.model('Album', Albums);
+
+module.exports = bookshelf.model('Artists', Artists);
