@@ -14,4 +14,10 @@ const getGenres = (req, res, next) => {
   })
 }
 
-module.exports = { getGenres };
+const getOneGenre = ({ params: {id} }, res, next) => {
+  Genres.getOne(id)
+  .then( genre => res.status(200).json(genre))
+  .catch( error => next(error) )
+}
+
+module.exports = { getGenres, getOneGenre };

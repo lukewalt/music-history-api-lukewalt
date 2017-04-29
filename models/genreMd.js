@@ -8,12 +8,14 @@ const Genres = bookshelf.Model.extend({
   getAll: function(){
     return this.forge()
     .fetchAll()
-    .then( rows => {
-      return rows
-    })
-    .catch( error => {
-      return error
-    })
+    .then( rows => rows)
+    .catch( error => error )
+  },
+  getOne: function(id) {
+    return this.forge({id})
+    .fetch()
+    .then( genre => genre )
+    .catch( err => err )
   }
 
 })
