@@ -14,6 +14,12 @@ const Artists = bookshelf.Model.extend({
     .catch( error => {
       return error
     })
+  },
+  getOne: function(id) {
+    return this.forge({id})
+    .fetch()
+    .then( artist => aritst )
+    .catch(error => error)
   }
 })
 

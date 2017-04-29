@@ -14,4 +14,12 @@ const getAlbums = (req, res, next) => {
   })
 }
 
-module.exports = { getAlbums };
+const getOneAlbum = ({ params: {id} }, res, next) => {
+  Albums.getOne(id)
+  .then( album => {
+    res.status(200).json(album)
+  })
+  .catch( error => next(error))
+}
+
+module.exports = { getAlbums, getOneAlbum };

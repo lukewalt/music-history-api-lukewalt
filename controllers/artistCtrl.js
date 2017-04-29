@@ -14,4 +14,10 @@ const getArtists = (req, res, next) => {
   })
 }
 
-module.exports = { getArtists };
+const getOneArtist = ({ params: {id} }, res, next) => {
+  Artists.getOne(id)
+  .then( artist => res.status(200).json(artist))
+  .catch( error => next(error))
+}
+
+module.exports = { getArtists, getOneArtist };

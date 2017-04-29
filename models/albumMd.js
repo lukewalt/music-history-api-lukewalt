@@ -14,6 +14,15 @@ const Albums = bookshelf.Model.extend({
     .catch( error => {
       return error
     })
+  },
+  getOne: function(id) {
+    return this.forge({id})
+    .fetch()
+    .then( album => {
+      return album
+    })
+    .catch( error => error)
+
   }
 })
 
