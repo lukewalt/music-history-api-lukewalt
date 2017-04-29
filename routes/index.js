@@ -10,8 +10,8 @@ router.get('/', (req, res) => {
   res.json({
     "title": "The Music History API",
     "songs": "music-history-api.herokuapp.com/musichistory/api/songs",
-    "songs": "music-history-api.herokuapp.com/musichistory/api/artists",
-    "songs": "music-history-api.herokuapp.com/musichistory/api/genres",
+    "artists": "music-history-api.herokuapp.com/musichistory/api/artists",
+    "genres": "music-history-api.herokuapp.com/musichistory/api/genres",
     "albums": "music-history-api.herokuapp.com/musichistory/api/albums"
   });
 });
