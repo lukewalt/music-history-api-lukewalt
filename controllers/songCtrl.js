@@ -1,6 +1,5 @@
 'use strict';
 
-
 // require a song model
 const { bookshelf } = require('../db/database');
 const Songs = require('../models/songMd');
@@ -17,11 +16,12 @@ const getSongs = (req, res, next) => {
   })
 }
 
-// const createSong = (req, res, next) => {
-//   Songs.forge({id, title, SongLength, })
-// }
+const getOneSong = ({ params: {id} }, res, next) => {
+  Songs.getOne(id)
+  .then( song => res.status(200).json(song))
+  .catch( error => next(error))
+}
 
-// stretch goal: methods for adding, deleting, editing a song
 
 
-module.exports = { getSongs };
+module.exports = { getSongs, getOneSong };
