@@ -7,8 +7,10 @@
 module.exports = {
 
   development: {
-    client: 'postgresql',
-    connection: 'postgres://localhost/',
+    client: 'pg',
+    connection: {
+      database: 'musichistory'  
+    },
     migrations: {
       directory: __dirname + '/db/migrations'
     },
@@ -19,7 +21,7 @@ module.exports = {
 
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       database: process.env.DATABASE_URL
     },
