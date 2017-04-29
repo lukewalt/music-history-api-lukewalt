@@ -9,10 +9,10 @@ const router = Router();
 router.get('/', (req, res) => {
   res.json({
     "title": "The Music History API",
-    "songs": "http://localhost:3000/api/v1/songs",
-    "songs": "http://localhost:3000/api/v1/artists",
-    "songs": "http://localhost:3000/api/v1/genres",
-    "albums": "http://localhost:3000/api/v1/albums"
+    "songs": "music-history-api.herokuapp.com/musichistory/api/songs",
+    "songs": "music-history-api.herokuapp.com/musichistory/api/artists",
+    "songs": "music-history-api.herokuapp.com/musichistory/api/genres",
+    "albums": "music-history-api.herokuapp.com/musichistory/api/albums"
   });
 });
 
