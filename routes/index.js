@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
     "addGenre": "music-history-api.herokuapp.com/musichistory/api/genres/{obj}",
     "albums": "music-history-api.herokuapp.com/musichistory/api/albums",
     "oneAlbum": "music-history-api.herokuapp.com/musichistory/api/albums/:id",
-    "addAlbum": "music-history-api.herokuapp.com/musichistory/api/albums/{obj}"
+    "addAlbum": "music-history-api.herokuapp.com/musichistory/api/albums/{obj}",
     "removeAlbum": "music-history-api.herokuapp.com/musichistory/api/albums/:id"
   });
 });
