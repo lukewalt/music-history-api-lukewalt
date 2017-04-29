@@ -9,7 +9,7 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      database: 'musichistory'  
+      database: 'musichistory'
     },
     migrations: {
       directory: __dirname + '/db/migrations'

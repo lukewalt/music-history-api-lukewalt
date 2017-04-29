@@ -11,7 +11,7 @@ exports.seed = function(knex, Promise) {
         release_date: "11/14/2003",
         genre_id: 1,
         artist_id: 1,
-        album_id: 1,
+        album_id: 1
       }),
       knex('song').insert({
         title: "Sgt. Pepper's",
@@ -19,7 +19,7 @@ exports.seed = function(knex, Promise) {
         release_date: "06/01/1967",
         genre_id: 2,
         artist_id: 2,
-        album_id: 2,
+        album_id: 2
       }),
       knex('song').insert({
         title: "Come Together",
@@ -27,7 +27,7 @@ exports.seed = function(knex, Promise) {
         release_date: "6/14/1979",
         genre_id: 3,
         artist_id: 3,
-        album_id: 3,
+        album_id: 3
       }),
       knex('song').insert({
         title: "Revolver",
@@ -35,7 +35,7 @@ exports.seed = function(knex, Promise) {
         release_date: "08/05/1966",
         genre_id: 4,
         artist_id: 4,
-        album_id: 4,
+        album_id: 4
       }),
       knex('song').insert({
         title: "Miles Ahead",
@@ -43,15 +43,15 @@ exports.seed = function(knex, Promise) {
         release_date: "10/21/1957",
         genre_id: 5,
         artist_id: 5,
-        album_id: 5,
+        album_id: 5
       }),
       knex('song').insert({
         title: "Moanin' in the Moonlight",
         song_length: 421,
         release_date: "05/14/1959",
-        genre_id: 6,
-        artist_id: 6,
-        album_id: 6,
+        genre_id: 3,
+        artist_id: 3,
+        album_id: 3
       })
     ])
 

@@ -6,7 +6,7 @@ exports.seed = function(knex, Promise) {
     // Inserts seed entries
     return Promise.all([
       knex('album').insert({
-        name: "The Black Album",
+        title: "The Black Album",
         release_date: "11/14/2003",
         album_length: 2268,
         label: "Def Jam",
@@ -14,7 +14,7 @@ exports.seed = function(knex, Promise) {
         genre_id: 1
       }),
       knex('album').insert({
-        name: "Sgt. Pepper's Lonely Hearts Club Band",
+        title: "Sgt. Pepper's Lonely Hearts Club Band",
         release_date: "06/01/1967",
         album_length: 2392,
         label: "Stones Throw Records",
@@ -22,7 +22,7 @@ exports.seed = function(knex, Promise) {
         genre_id: 2
       }),
       knex('album').insert({
-        name: "Tres Hombres",
+        title: "Tres Hombres",
         release_date: "6/14/1979",
         album_length: 321,
         label: "Warner Bros.",
@@ -30,7 +30,7 @@ exports.seed = function(knex, Promise) {
         genre_id: 2
       }),
       knex('album').insert({
-        name: "Revolver",
+        title: "Revolver",
         release_date: "08/05/1966",
         album_length: 2083,
         label: "Parlophone",
@@ -38,7 +38,7 @@ exports.seed = function(knex, Promise) {
         genre_id: 2
       }),
       knex('album').insert({
-        name: "Miles Ahead",
+        title: "Miles Ahead",
         release_date: "10/21/1957",
         album_length: 2132,
         label: "Columbia",
@@ -46,11 +46,11 @@ exports.seed = function(knex, Promise) {
         genre_id: 4
       }),
       knex('album').insert({
-        name: "Moanin' in the Moonlight",
+        title: "Moanin' in the Moonlight",
         release_date: "05/14/1959",
         album_length: 2033,
         label: "Chess",
-        artist_id: 6,
+        artist_id: 3,
         genre_id: 3
       })
     ])
