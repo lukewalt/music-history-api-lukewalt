@@ -1,7 +1,8 @@
 'use strict';
 
+const envirnoment = process.env.NODE_ENV || 'development'
 // Setup the configuration module for knex and bookshelf
-const config = require('../knexfile')['development']
+const config = require('../knexfile')[envirnoment]
 const knex = require('knex')(config);
 const bookshelf = require('bookshelf')(knex);
 

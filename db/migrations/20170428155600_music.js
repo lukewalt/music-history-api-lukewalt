@@ -23,7 +23,7 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('title').notNullable();
     table.integer('song_length').unsigned();
-    table.integer('release_date').unsigned().references(album.release_date);
+    table.string('release_date').unsigned().references(album.release_date);
     table.integer('genre_id').unsigned().references(genre.id);
     table.integer('artist_id').unsigned().references(artist.id);
     table.integer('album_id').unsigned().references(album.id);
